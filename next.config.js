@@ -3,7 +3,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
-const securityHeaders = [{ key: 'Content-Security-Policy', value: 'self' }];
+const securityHeaders = [
+  { key: 'Content-Security-Policy', value: 'default-src "self"' },
+];
 
 module.exports = withBundleAnalyzer({
   async headers() {
