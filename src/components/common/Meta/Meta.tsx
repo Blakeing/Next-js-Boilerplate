@@ -22,6 +22,8 @@ const Meta = (props: IMetaProps) => {
           content="width=device-width,initial-scale=1"
           key="viewport"
         />
+        <meta name="theme-color" content="#317EFB" />
+        <link rel="manifest" href={`${router.basePath}/manifest.json`} />
         <link
           rel="apple-touch-icon"
           href={`${router.basePath}/apple-touch-icon.png`}
