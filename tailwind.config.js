@@ -2,7 +2,6 @@
 /* eslint-disable global-require */
 
 const colors = require('tailwindcss/colors');
-const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   mode: 'jit',
@@ -10,9 +9,6 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
-      },
       // fontFamily: {
       //   poppins: ['Quicksand', 'Poppins', 'system-ui'],
       // },

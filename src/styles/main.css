@@ -12,7 +12,6 @@ html {
 @tailwind utilities;
 
 
-
 .blog-text ul,
 ol {
   font-size: 110%;
