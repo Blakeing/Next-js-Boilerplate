@@ -1,5 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable global-require */
+/* eslint-disable import/no-extraneous-dependencies */
 
 const colors = require('tailwindcss/colors');
 
@@ -9,18 +9,6 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
-      // fontFamily: {
-      //   poppins: ['Quicksand', 'Poppins', 'system-ui'],
-      // },
-      // typography: {
-      //   DEFUALT: {
-      //     css: {
-      //       strong: {
-      //         fontWeight: '300',
-      //       },
-      //     },
-      //   },
-      // },
       colors: {
         primary: colors.orange,
         'primary-2': 'var(--primary-2)',
