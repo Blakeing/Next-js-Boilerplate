@@ -7,7 +7,7 @@ const securityHeaders = [
   {
     key: 'Content-Security-Policy',
     value:
-      "default-src [https://next-js-boilerplate-blue.vercel.app/ ] 'self' data: 'unsafe-inline'",
+      "default-src https://next-js-boilerplate-blue.vercel.app/ https://images.unsplash.com/ https://tailwindui.com/ https://randomuser.me/ 'self' data: 'unsafe-inline'",
   },
 ];
 
