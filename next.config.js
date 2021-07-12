@@ -4,7 +4,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 const securityHeaders = [
-  { key: 'Content-Security-Policy', value: 'default-src "self"' },
+  {
+    key: 'Content-Security-Policy',
+    value:
+      "default-src [https://next-js-boilerplate-blue.vercel.app/ ] 'self' data: 'unsafe-inline'",
+  },
 ];
 
 module.exports = withBundleAnalyzer({
