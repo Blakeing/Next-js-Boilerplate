@@ -1,6 +1,17 @@
 /* eslint-disable import/no-extraneous-dependencies */
+const withPlugins = require('next-compose-plugins');
+
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
+});
+
+const runtimeCaching = require('next-pwa/cache');
+
+const withPWA = require('next-pwa')({
+  pwa: {
+    dest: 'public',
+    runtimeCaching,
+  },
 });
 
 const securityHeaders = [
@@ -11,7 +22,7 @@ const securityHeaders = [
   },
 ];
 
-module.exports = withBundleAnalyzer({
+const nextConfig = {
   async headers() {
     return [
       {
@@ -31,4 +42,13 @@ module.exports = withBundleAnalyzer({
   // So, the source code is "basePath-ready".
   // You can remove `basePath` if you don't need it.
   reactStrictMode: true,
-});
+};
+
+module.exports = withPlugins(
+  [
+    [withBundleAnalyzer],
+    [withPWA],
+    // your other plugins here
+  ],
+  nextConfig
+);
