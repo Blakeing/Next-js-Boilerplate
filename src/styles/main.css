@@ -11,10 +11,7 @@ html {
 
 @tailwind utilities;
 
-p {
-  margin: 15px 0;
-  line-height: 1.8;
-}
+
 
 .blog-text ul,
 ol {
