@@ -43,13 +43,5 @@
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/templates/post.js",
-    "src/utils/SortByDate.ts",
-    "src/lib/posts.js",
-    "src/utils/SortByDate.js"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
