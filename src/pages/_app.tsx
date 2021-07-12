@@ -3,6 +3,7 @@
 import { AppProps } from 'next/app';
 
 import '../styles/main.css';
+import '../styles/chrome-bug.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
