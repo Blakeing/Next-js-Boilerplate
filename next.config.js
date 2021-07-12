@@ -3,7 +3,18 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
+const securityHeaders = [{ key: 'Content-Security-Policy', value: 'self' }];
+
 module.exports = withBundleAnalyzer({
+  async headers() {
+    return [
+      {
+        // Apply these headers to all routes in your application.
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ];
+  },
   images: {
     domains: ['source.unsplash.com'],
   },
