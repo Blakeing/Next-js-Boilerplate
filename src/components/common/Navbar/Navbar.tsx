@@ -110,9 +110,15 @@ const Navbar = () => {
                       <span className="sr-only">Workflow</span>
                       <img
                         className="w-auto h-8 sm:h-10"
-                        src="`https://tailwindui.com/`img/logos/workflow-mark-indigo-600.svg"
-                        alt=""
+                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                        alt="test"
                       />
+                      {/* <Image
+                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                        alt="test"
+                        height={40}
+                        width={32}
+                      /> */}
                     </a>
                   </Link>
                 </div>

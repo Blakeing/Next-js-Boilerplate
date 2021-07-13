@@ -33,7 +33,7 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ['source.unsplash.com'],
+    domains: ['source.unsplash.com', 'tailwindui.com'],
   },
   poweredByHeader: false,
   trailingSlash: true,
