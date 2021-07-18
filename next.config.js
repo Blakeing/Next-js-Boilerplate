@@ -22,6 +22,7 @@ const ContentSecurityPolicy = `
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src * blob: data:;
   media-src 'none';
+  worker-src 'self';
   connect-src *;
   font-src 'self';
 `;
