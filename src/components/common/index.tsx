@@ -6,3 +6,6 @@ export { default as Post } from './Post';
 export { default as CategoryLabel } from './CategoryLabel';
 export { default as CategoryList } from './CategoryList';
 export { default as Pagination } from './Pagination';
+export { default as MDXComponents } from './MDXComponents';
+export { default as Container } from './Container';
+export { default as BlogPost } from './BlogPost';

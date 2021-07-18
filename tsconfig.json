@@ -39,6 +39,7 @@
       "@assets/*": ["public/assets/*"],
       "@lib/*": ["src/lib/*"],
       "@utils/*": ["src/utils/*"],
+      "@layouts/*": ["src/layouts/*"],
       "@config/*": ["config/*"]
     }
   },

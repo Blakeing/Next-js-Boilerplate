@@ -144,9 +144,9 @@ const Navbar = () => {
                         Test
                       </a>
                     </Link>
-                    <Link href="/projects">
+                    <Link href="/lee">
                       <a className="text-base font-medium text-secondary-500 hover:text-secondary-900">
-                        Projects
+                        Lee
                       </a>
                     </Link>
                     <Link href="/blog">
