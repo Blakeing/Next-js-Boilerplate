@@ -7,15 +7,13 @@ import path from 'path';
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 import { serialize } from 'next-mdx-remote/serialize';
-import IReadTimeResults from 'reading-time';
-
-// const root = process.cwd();
+import readingTime from 'reading-time';
 
 export async function getFiles(type) {
   return fs.readdirSync(path.join('./src', 'data', type));
 }
 
-export async function getFileBySlug(type, slug) {
+export async function getFileBySlug(type, slug): any {
   const source = slug
     ? fs.readFileSync(path.join('./src', 'data', type, `${slug}.mdx`), 'utf8')
     : fs.readFileSync(path.join('./src', 'data', `${type}.mdx`), 'utf8');
@@ -46,7 +44,7 @@ export async function getFileBySlug(type, slug) {
     tweetIDs: tweetIDs || [],
     frontMatter: {
       wordCount: content.split(/\s+/gu).length,
-      readingTime: IReadTimeResults(content),
+      readingTime: readingTime(content),
       slug: slug || null,
       ...data,
     },
