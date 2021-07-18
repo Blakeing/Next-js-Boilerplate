@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+// @ts-nocheck
 import Image from 'next/image';
 import Link from 'next/link';
 

@@ -1,11 +1,12 @@
 /* eslint-disable global-require */
+// @ts-nocheck
 import fs from 'fs';
 import path from 'path';
 
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 import { serialize } from 'next-mdx-remote/serialize';
-import readingTime from 'reading-time';
+import { readingTime } from 'reading-time';
 
 // const root = process.cwd();
 

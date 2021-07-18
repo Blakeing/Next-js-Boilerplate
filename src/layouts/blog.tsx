@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { parseISO, format } from 'date-fns';
 
 import { Container } from '@components/common';

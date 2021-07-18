@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+// @ts-nocheck
 import { useState } from 'react';
 
 import { BlogPost, Container } from '@components/common';

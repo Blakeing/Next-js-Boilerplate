@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+// @ts-nocheck
 import { MDXRemote } from 'next-mdx-remote';
 
 import { MDXComponents } from '@components/common';
