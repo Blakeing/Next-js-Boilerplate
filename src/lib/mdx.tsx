@@ -1,12 +1,13 @@
 /* eslint-disable global-require */
 // @ts-nocheck
+
 import fs from 'fs';
 import path from 'path';
 
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 import { serialize } from 'next-mdx-remote/serialize';
-import { readingTime } from 'reading-time';
+import IReadTimeResults from 'reading-time';
 
 // const root = process.cwd();
 
@@ -45,7 +46,7 @@ export async function getFileBySlug(type, slug) {
     tweetIDs: tweetIDs || [],
     frontMatter: {
       wordCount: content.split(/\s+/gu).length,
-      readingTime: readingTime(content),
+      readingTime: IReadTimeResults(content),
       slug: slug || null,
       ...data,
     },
