@@ -8,6 +8,9 @@ type IMetaProps = {
   title: string;
   description: string;
   canonical?: string;
+  image: string;
+  date: string;
+  type: string;
 };
 
 const Meta = (props: IMetaProps) => {
@@ -22,7 +25,11 @@ const Meta = (props: IMetaProps) => {
           content="width=device-width,initial-scale=1"
           key="viewport"
         />
+        <meta property="og:image" content={props.image} />
         <meta name="theme-color" content="#317EFB" />
+        {props.date && (
+          <meta property="article:published_time" content={props.date} />
+        )}
         <link rel="manifest" href={`${router.basePath}/manifest.json`} />
         <link
           rel="apple-touch-icon"
@@ -55,6 +62,7 @@ const Meta = (props: IMetaProps) => {
         canonical={props.canonical}
         openGraph={{
           title: props.title,
+          type: props.type,
           description: props.description,
           url: props.canonical,
           locale: AppConfig.locale,

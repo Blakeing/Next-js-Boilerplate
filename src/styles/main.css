@@ -18,8 +18,9 @@ html {
   font-feature-settings: 'case' 1, 'rlig' 1, 'calt' 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: bluescale;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -27,7 +28,7 @@ body {
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: bluescale;
   background-color: var(--primary);
   color: var(--text-primary);
   overscroll-behavior-x: none;
@@ -47,6 +48,7 @@ body {
 }
 
 @tailwind utilities;
+
 
 
 .blog-text ul,
@@ -92,4 +94,77 @@ ol {
 }
 .bg-pink-600 {
   background-color: #DB2777;
+}
+
+.prose .anchor {
+  @apply absolute invisible;
+
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  @apply visible no-underline;
+}
+
+.prose .anchor:after {
+  @apply text-blue-300 ;
+  content: '#';
+}
+
+.prose *:hover > .anchor {
+  @apply visible no-underline;
+}
+
+.prose pre {
+  @apply border border-blue-200 bg-blue-50 ;
+}
+
+.prose code {
+  @apply text-blue-800  px-1 py-0.5 border border-blue-100  rounded-md bg-blue-100 ;
+}
+
+.prose img {
+  /* Don't apply styles to next/image */
+  @apply m-0;
+}
+
+.prose p {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.prose > :first-child {
+  /* Override removing top margin, causing layout shift */
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply text-blue-800 ;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.remark-code-title {
+  @apply px-5 py-3 font-mono text-sm font-bold text-blue-800 bg-blue-200 border border-b-0 border-blue-200 rounded-t;
+}
+
+.remark-code-title + pre {
+  @apply mt-0 rounded-t-none;
+}
+
+.mdx-marker {
+  @apply block px-4 -mx-4 bg-blue-100 border-l-4 border-blue-500;
 }
