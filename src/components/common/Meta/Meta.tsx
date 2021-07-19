@@ -8,6 +8,12 @@ type IMetaProps = {
   title: string;
   description: string;
   canonical?: string;
+<<<<<<< Updated upstream
+=======
+  date?: string;
+  type?: string;
+  image?: string;
+>>>>>>> Stashed changes
 };
 
 const Meta = (props: IMetaProps) => {
@@ -22,6 +28,11 @@ const Meta = (props: IMetaProps) => {
           content="width=device-width,initial-scale=1"
           key="viewport"
         />
+<<<<<<< Updated upstream
+=======
+        <meta property="og:url" content={`https://leerob.io${router.asPath}`} />
+        <meta property="og:image" content={props.image} />
+>>>>>>> Stashed changes
         <meta name="theme-color" content="#317EFB" />
         <link rel="manifest" href={`${router.basePath}/manifest.json`} />
         <link
