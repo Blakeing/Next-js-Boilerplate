@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 // @ts-nocheck
-import BlogLayout from '@layouts/BlogLayout';
-import { getFiles, getFileBySlug } from '@lib/mdx';
 import { MDXRemote } from 'next-mdx-remote';
 
 import { MDXComponents } from '@components/common';
+import BlogLayout from '@layouts/blog';
+import { getFiles, getFileBySlug } from '@lib/mdx';
 
 export default function Blog({ mdxSource, frontMatter }) {
   return (

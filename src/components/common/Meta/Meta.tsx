@@ -5,15 +5,12 @@ import { useRouter } from 'next/router';
 import { AppConfig } from '@utils/AppConfig';
 
 type IMetaProps = {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   canonical?: string;
-<<<<<<< Updated upstream
-=======
+  image?: string;
   date?: string;
   type?: string;
-  image?: string;
->>>>>>> Stashed changes
 };
 
 const Meta = (props: IMetaProps) => {
@@ -28,12 +25,11 @@ const Meta = (props: IMetaProps) => {
           content="width=device-width,initial-scale=1"
           key="viewport"
         />
-<<<<<<< Updated upstream
-=======
-        <meta property="og:url" content={`https://leerob.io${router.asPath}`} />
         <meta property="og:image" content={props.image} />
->>>>>>> Stashed changes
         <meta name="theme-color" content="#317EFB" />
+        {props.date && (
+          <meta property="article:published_time" content={props.date} />
+        )}
         <link rel="manifest" href={`${router.basePath}/manifest.json`} />
         <link
           rel="apple-touch-icon"
@@ -66,6 +62,7 @@ const Meta = (props: IMetaProps) => {
         canonical={props.canonical}
         openGraph={{
           title: props.title,
+          type: props.type,
           description: props.description,
           url: props.canonical,
           locale: AppConfig.locale,

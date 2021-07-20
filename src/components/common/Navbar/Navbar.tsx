@@ -24,6 +24,7 @@ import {
 } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import cn from 'classnames';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const solutions = [
@@ -104,14 +105,20 @@ const Navbar = () => {
             />
             <div className="relative z-20">
               <div className="container flex items-center justify-between px-4 py-5 mx-auto sm:px-6 lg:px-8 sm:py-4 md:justify-start md:space-x-10">
-                <div>
+                <div className="">
                   <Link href="/">
                     <a className="flex">
                       <span className="sr-only">Workflow</span>
-                      <img
+                      {/* <img
                         className="w-auto h-8 sm:h-10"
                         src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                        alt=""
+                        alt="test"
+                      /> */}
+                      <Image
+                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                        alt="test"
+                        width={45}
+                        height={40}
                       />
                     </a>
                   </Link>
@@ -137,9 +144,9 @@ const Navbar = () => {
                         Test
                       </a>
                     </Link>
-                    <Link href="/projects">
+                    <Link href="/lee">
                       <a className="text-base font-medium text-secondary-500 hover:text-secondary-900">
-                        Projects
+                        Lee
                       </a>
                     </Link>
                     <Link href="/blog">
@@ -453,10 +460,16 @@ const Navbar = () => {
                   <div className="px-5 pt-5 pb-6 sm:pb-8">
                     <div className="flex items-center justify-between">
                       <div>
-                        <img
+                        {/* <img
                           className="w-auto h-8"
                           src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                           alt="Workflow"
+                        /> */}
+                        <Image
+                          src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                          alt="test"
+                          width={35}
+                          height={32}
                         />
                       </div>
                       <div className="-mr-2">
