@@ -1,9 +1,12 @@
 // @ts-nocheck
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const BlogPost = ({ title, summary, slug }) => {
+  const router = useRouter();
+
   return (
-    <Link href={`/lee/${slug}`}>
+    <Link href={`${router.pathname}/${slug}`}>
       <a className="w-full">
         <div className="mb-8 w-full">
           <div className="flex flex-col md:flex-row justify-between">

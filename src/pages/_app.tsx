@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import { AppProps } from 'next/app';
 
-import { MDXComponents } from '@components/common';
+import { MDXComponents, Head } from '@components/common';
 import '../styles/main.css';
 import '../styles/chrome-bug.css';
 
@@ -16,6 +16,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head />
       <MDXProvider components={MDXComponents}>
         <Component {...pageProps} />
       </MDXProvider>

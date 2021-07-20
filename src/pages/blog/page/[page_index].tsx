@@ -2,18 +2,12 @@
 import fs from 'fs';
 import path from 'path';
 
-import {
-  CategoryList,
-  Layout,
-  Post,
-  Pagination,
-  Meta,
-} from '@components/common';
+import { CategoryList, Layout, Post, Pagination } from '@components/common';
 import { getPosts } from '@lib/posts';
 
 export default function BlogPage({ posts, numPages, currentPage, categories }) {
   return (
-    <Layout meta={<Meta title="Test" description="Lorem ipsum" />}>
+    <Layout>
       <div className="flex justify-between flex-col md:flex-row">
         <div className="w-3/4 mr-10">
           <h1 className="text-5xl border-b-4 p-5 font-bold">Blog</h1>

@@ -9,3 +9,4 @@ export { default as Pagination } from './Pagination';
 export { default as MDXComponents } from './MDXComponents';
 export { default as Container } from './Container';
 export { default as BlogPost } from './BlogPost';
+export { default as Head } from './Head';
