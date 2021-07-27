@@ -3,19 +3,19 @@
 import { MDXRemote } from 'next-mdx-remote';
 
 import { MDXComponents } from '@components/common';
-import BlogLayout from '@layouts/blog';
+import BradLayout from '@layouts/BradLayout';
 import { getFiles, getFileBySlug } from '@lib/mdx';
 
 export default function Blog({ mdxSource, frontMatter }) {
   return (
-    <BlogLayout frontMatter={frontMatter}>
+    <BradLayout frontMatter={frontMatter}>
       <MDXRemote
         {...mdxSource}
         components={{
           ...MDXComponents,
         }}
       />
-    </BlogLayout>
+    </BradLayout>
   );
 }
 

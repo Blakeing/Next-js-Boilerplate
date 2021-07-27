@@ -119,9 +119,6 @@ ol {
   @apply visible no-underline;
 }
 
-.prose pre {
-  @apply border border-blue-200 bg-blue-50 ;
-}
 
 .prose code {
   @apply text-blue-800  px-1 py-0.5 border border-blue-100  rounded-md bg-blue-100 ;

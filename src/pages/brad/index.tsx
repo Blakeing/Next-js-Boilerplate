@@ -2,7 +2,8 @@
 // @ts-nocheck
 import { useState } from 'react';
 
-import { BlogPost, Layout, Meta } from '@components/common';
+import { BlogPost } from '@components/common';
+import BradLayout from '@layouts/BradLayout';
 import { getAllFilesFrontMatter } from '@lib/mdx';
 
 export default function Blog({ posts }) {
@@ -17,7 +18,7 @@ export default function Blog({ posts }) {
     );
 
   return (
-    <Layout meta={<Meta title="Test" description="Lorem ipsum" />}>
+    <BradLayout>
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
           Blog
@@ -62,7 +63,7 @@ export default function Blog({ posts }) {
           <BlogPost key={frontMatter.title} {...frontMatter} />
         ))}
       </div>
-    </Layout>
+    </BradLayout>
   );
 }
 

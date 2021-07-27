@@ -85,7 +85,7 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ['source.unsplash.com', 'tailwindui.com'],
+    domains: ['source.unsplash.com', 'tailwindui.com', 'randomuser.me'],
   },
   poweredByHeader: false,
   trailingSlash: true,
